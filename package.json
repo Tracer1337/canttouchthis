@@ -1,4 +1,38 @@
 {
   "name": "canttouchthis",
-  "packageManager": "yarn@4.5.0"
+  "version": "1.0.0",
+  "description": "Make any dom element repell from the mouse",
+  "author": "Merlin Moelter <merlin.moelter@gmail.com> (https://www.merlinmoelter.com/)",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Tracer1337/canttouchthis",
+    "type": "git"
+  },
+  "homepage": "https://github.com/Tracer1337/canttouchthis",
+  "bugs": "https://github.com/Tracer1337/canttouchthis/issues",
+  "files": [
+    "dist/*"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && run-p build:*",
+    "build:cjs": "esbuild src/index.ts --bundle --minify --format=cjs --outfile=dist/index.cjs",
+    "build:esm": "esbuild src/index.ts --bundle --minify --format=esm --outfile=dist/index.mjs",
+    "build:types": "tsc",
+    "dev:demo": "cd demo && yarn start",
+    "dev": "nodemon --watch 'src/**/*' -e ts --exec \"run-p dev:* build\""
+  },
+  "devDependencies": {
+    "@types/victor": "^1.1.5",
+    "esbuild": "^0.24.0",
+    "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "victor": "^1.1.0"
+  }
 }
