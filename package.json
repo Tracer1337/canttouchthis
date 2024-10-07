@@ -1,6 +1,6 @@
 {
   "name": "canttouchthis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make any dom element repell from the mouse",
   "author": "Merlin Moelter <merlin.moelter@gmail.com> (https://www.merlinmoelter.com/)",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "url": "https://github.com/Tracer1337/canttouchthis",
     "type": "git"
   },
-  "homepage": "https://github.com/Tracer1337/canttouchthis",
+  "homepage": "https://tracer1337.github.io/canttouchthis/",
   "bugs": "https://github.com/Tracer1337/canttouchthis/issues",
   "files": [
     "dist/*"
